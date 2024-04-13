@@ -1,0 +1,30 @@
+$color-primary1: #CDA274;
+$color-primary2: #292F36;
+$color-primary3: #F4F0EC;
+$color-text: #4d5053;
+$color-white: #fff;
+
+.btn {
+    font-family: 'Jost', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding: 26px 54px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    box-shadow: 0 10px 20px 0 rgba(192, 192, 192, 0.35);
+}
+
+@mixin default-btn($color, $bg-color) {
+    @extend .btn;
+    color: $color;
+    background: $bg-color;
+}

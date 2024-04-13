@@ -1,0 +1,58 @@
+.header {
+    padding-top: 44px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &__title {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+        line-height: 1.25;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        justify-content: end;
+        gap: 45px;
+        align-items: center;
+    }
+
+    &__item {
+        font-size: 20px;
+        line-height: 1.25;
+    }
+}
+
+.header1 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 1.25;
+    color: $color-primary2;
+    white-space: pre-line;
+    text-align: left;
+}
+
+.header2 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: $color-primary2;
+}
