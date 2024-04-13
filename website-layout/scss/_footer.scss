@@ -1,0 +1,27 @@
+.footer {
+    padding-top: 96px;
+    padding-bottom: 134px;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        &_item {
+            width: 20px;
+            height: 20px;
+
+            &>a {
+                display: block;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

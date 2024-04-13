@@ -215,4 +215,63 @@ body {
 }
 .project__img_04 {
   border-radius: 0 0 0 80px;
+}
+
+.achievement {
+  margin-top: 96px;
+  padding-top: 151px;
+  padding-bottom: 151px;
+  background-color: #F4F0EC;
+}
+.achievement__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.achievement__item {
+  width: 25%;
+  text-align: center;
+}
+.achievement__item:not(:last-child) {
+  border-right: 1px solid #CDA274;
+}
+.achievement__indicator {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: #CDA274;
+}
+.achievement__desc {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #4d5053;
+}
+
+.footer {
+  padding-top: 96px;
+  padding-bottom: 134px;
+}
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.footer__social_item {
+  width: 20px;
+  height: 20px;
+}
+.footer__social_item > a {
+  display: block;
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=style.css.map */
