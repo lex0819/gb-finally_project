@@ -9,6 +9,10 @@
         grid-template-rows: auto;
         row-gap: 56px;
         column-gap: 99px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__footer {

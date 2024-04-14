@@ -14,10 +14,16 @@
     &__item {
         width: 25%;
         text-align: center;
-    }
 
-    &__item:not(:last-child) {
-        border-right: 1px solid $color-primary1;
+        &:not(:last-child) {
+            border-right: 1px solid $color-primary1;
+        }
+
+
+
+        @media (max-width: 768px) {
+            width: 50%;
+        }
     }
 
     &__indicator {
