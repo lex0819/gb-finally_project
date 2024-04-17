@@ -1,0 +1,57 @@
+new Vue({
+    el: '#app',
+    data: {
+        articles: [
+            {
+                id: 0,
+                title: "Let's Get Solution For Building Construction Work",
+                img: './img/news01.jpg',
+                alt: 'news01',
+                category: 'Kitchen Design',
+                date: '26 December,2022',
+            },
+            {
+                id: 1,
+                title: 'Low Cost Latest Invented Interior Designing Ideas.',
+                img: './img/news02.jpg',
+                alt: 'news02',
+                category: 'Living Design',
+                date: '22 December,2022',
+            },
+            {
+                id: 2,
+                title: 'Best For Any Office & Business Interior Solution',
+                img: './img/news03.jpg',
+                alt: 'news03',
+                category: 'Inventor Design',
+                date: '25 December,2022',
+            },
+            {
+                id: 3,
+                title: "Let's Get Solution For Building Construction Work",
+                img: './img/news04.jpg',
+                alt: 'news04',
+                category: 'Kitchen Design',
+                date: '26 December,2022',
+            },
+            {
+                id: 4,
+                title: 'Low Cost Latest Invented Interior Designing Ideas.',
+                img: './img/news05.jpg',
+                alt: 'news05',
+                category: 'Living Design',
+                date: '22 December,2022',
+            },
+            {
+                id: 5,
+                title: 'Best For Any Office & Business Interior Solution',
+                img: './img/news06.jpg',
+                alt: 'news06',
+                category: 'Inventor Design',
+                date: '25 December,2022',
+            },
+        ],
+    },
+    methods: {},
+    computed: {},
+});

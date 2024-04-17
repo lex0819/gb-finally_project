@@ -1,6 +1,10 @@
 .project {
     padding-top: 96px;
 
+    &__title {
+        text-align: center;
+    }
+
     &__list {
         margin-top: 93px;
         display: grid;

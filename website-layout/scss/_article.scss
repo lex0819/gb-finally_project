@@ -1,12 +1,17 @@
 .article {
     margin-top: 96px;
 
+    &__title {
+        text-align: center;
+    }
+
     &__list {
         margin-top: 52px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         column-gap: 27px;
+        row-gap: 30px;
 
         @media (max-width: 768px) {
             grid-template-columns: 1fr;

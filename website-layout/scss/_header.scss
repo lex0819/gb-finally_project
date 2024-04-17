@@ -1,5 +1,6 @@
 .header {
     padding-top: 44px;
+    padding-bottom: 45px;
 
     &__inner {
         display: flex;
@@ -52,8 +53,7 @@
     font-weight: 400;
     font-size: 50px;
     line-height: 1.25;
-    letter-spacing: 0.02em;
-    text-align: center;
+    // letter-spacing: 0.02em;
     color: $color-primary2;
 
     &__desc {
