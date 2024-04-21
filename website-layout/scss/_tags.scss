@@ -1,0 +1,28 @@
+.tags {}
+
+.tag {
+    &-list {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &-item {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 1.25;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: $color-black;
+        padding: 9px 30px;
+        background-color: $color-primary3;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    &-active {
+        color: $color-white;
+        background-color: $color-primary2;
+    }
+}
