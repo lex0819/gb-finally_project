@@ -1,7 +1,4 @@
 .DS_Store
-credentials/
-style.css.map
-
 node_modules
 /dist
 
