@@ -1,0 +1,158 @@
+<template>
+    <div class="news">
+        <ul class="news-list">
+            <li v-for="(item, index) in filterArticlesTag" :key="index">
+                <ArticleItem :article="item"></ArticleItem>
+            </li>
+        </ul>
+        <div class="news-tags">
+            <tags :tags="tags" @chosenTag="setTag"></tags>
+        </div>
+    </div>
+</template>
+
+<script>
+import ArticleItem from './ArticleItem';
+export default {
+    name: 'ArticleList',
+    components: {
+        ArticleItem,
+    },
+
+    props: ['articles', 'tags'],
+    data() {
+        return {
+            tag: '',
+        };
+    },
+    methods: {
+        setTag(tag) {
+            this.tag = tag;
+        },
+    },
+    computed: {
+        filterArticlesTag() {
+            if (!this.tag) {
+                return this.articles;
+            } else {
+                return this.articles.filter((it) => it.tag === this.tag);
+            }
+        },
+    },
+};
+</script>
+
+<style lang="scss">
+@import '@/scss/_vars.scss';
+@import '@/scss/_main.scss';
+.news {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
+
+    @media (max-width: 960px) {
+        flex-direction: column-reverse;
+    }
+
+    &-list {
+        max-width: auto;
+        width: 67%;
+
+        @media (max-width: 960px) {
+            width: 100%;
+        }
+    }
+
+    &-item {
+        margin-bottom: 27px;
+
+        & > h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-text {
+        & > img {
+            border-radius: 50px;
+        }
+
+        & > p {
+            @extend .large-paragraph;
+            margin-top: 48px;
+        }
+
+        & > ol {
+            @extend .large-paragraph;
+            margin-top: 24px;
+            list-style-type: decimal;
+        }
+
+        & li {
+            list-style-type: decimal;
+            margin-bottom: 42px;
+            margin-left: 30px;
+
+            &::marker {
+                color: $color-primary1;
+            }
+        }
+    }
+
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 46px;
+        @extend .small-text;
+    }
+
+    &-keywords {
+        margin-right: 30px;
+    }
+
+    &-design {
+        border-radius: 50px;
+        padding: 53px 227px;
+        width: 100%;
+        background-color: $color-primary3;
+        margin-top: 35px;
+        color: $color-primary1;
+
+        @media (max-width: 650px) {
+            padding: 50px;
+        }
+
+        & > p {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 1.25;
+            letter-spacing: 0.02em;
+            text-align: center;
+        }
+
+        &__quotes {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 200px !important;
+            line-height: 200px !important;
+            letter-spacing: 0.02em;
+            text-align: center;
+            transform: rotate(180deg);
+            margin-top: -110px;
+        }
+    }
+
+    &-tags {
+        max-width: 345px;
+        width: 33%;
+
+        @media (max-width: 960px) {
+            width: 100%;
+        }
+    }
+}
+</style>

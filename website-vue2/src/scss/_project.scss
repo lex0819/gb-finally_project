@@ -1,0 +1,58 @@
+.project {
+    padding-top: 96px;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__list {
+        margin-top: 93px;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        row-gap: 56px;
+        column-gap: 99px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 28px;
+    }
+
+    &__info {
+        text-align: left;
+    }
+
+    &__category {
+        margin-top: 4px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        color: $color-text;
+    }
+
+    &__img {
+        &_01 {
+            border-radius: 0 80px 0 0;
+        }
+
+        &_02 {
+            border-radius: 80px 0 0 0;
+        }
+
+        &_03 {
+            border-radius: 0 0 80px 0;
+        }
+
+        &_04 {
+            border-radius: 0 0 0 80px;
+        }
+    }
+}
