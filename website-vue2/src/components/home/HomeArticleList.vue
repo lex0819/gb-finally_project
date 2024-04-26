@@ -9,7 +9,7 @@
             </p>
             <ul class="article__list">
                 <li v-for="article in articles.slice(0, 3)" :key="article.id">
-                    <HomeArticleItem :article="article"></HomeArticleItem>
+                    <HomeArticleItem :article="article" />
                 </li>
             </ul>
             <div class="article__pagination"></div>

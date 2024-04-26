@@ -2,7 +2,7 @@
     <div class="news">
         <ul class="news-list">
             <li v-for="(item, index) in filterArticlesTag" :key="index">
-                <ArticleItem :article="item"></ArticleItem>
+                <ArticleItem :article="item" />
             </li>
         </ul>
         <div class="news-tags">
