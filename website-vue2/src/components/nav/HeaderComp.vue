@@ -9,13 +9,13 @@
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a href="./index.html" target="_blank">Home</a>
+                                <router-link to="/">Home</router-link>
                             </li>
                             <li class="menu__item">
-                                <a href="#" target="_blank">Project</a>
+                                <router-link to="/project">Project</router-link>
                             </li>
                             <li class="menu__item">
-                                <a href="./blog.html" target="_blank">Blog</a>
+                                <router-link to="/blog">Blog</router-link>
                             </li>
                         </ul>
                     </nav>
