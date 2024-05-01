@@ -17,7 +17,7 @@
 
 <script>
 export default {
-    name: 'Tags',
+    name: 'TagList',
 
     props: ['tags'],
     data() {
@@ -57,6 +57,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '@/assets/scss/_reset.scss';
+@import '@/assets/scss/_vars.scss';
+@import '@/assets/scss/_main.scss';
 .tags {
 }
 

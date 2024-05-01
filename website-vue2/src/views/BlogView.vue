@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-import BlogPage from '@/components/blog/BlogPage.vue';
+import BlogPage from '@/pages/BlogPage.vue';
 
 export default {
     name: 'BlogView',

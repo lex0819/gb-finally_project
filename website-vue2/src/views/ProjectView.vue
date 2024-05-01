@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-import ProjectPage from '@/components/project/ProjectPage.vue';
+import ProjectPage from '@/pages/ProjectPage.vue';
 
 export default {
     name: 'ProjectView',

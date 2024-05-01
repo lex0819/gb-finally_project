@@ -1,28 +1,26 @@
 <template>
-    <div>
-        <header class="header">
-            <div class="wrapper">
-                <div class="header__inner">
-                    <a href="./index.html" class="logo">
-                        <LogoComp />
-                    </a>
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__item">
-                                <router-link to="/">Home</router-link>
-                            </li>
-                            <li class="menu__item">
-                                <router-link to="/project">Project</router-link>
-                            </li>
-                            <li class="menu__item">
-                                <router-link to="/blog">Blog</router-link>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__inner">
+                <a href="./index.html" class="logo">
+                    <LogoComp />
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <router-link to="/">Home</router-link>
+                        </li>
+                        <li class="menu__item">
+                            <router-link to="/project">Project</router-link>
+                        </li>
+                        <li class="menu__item">
+                            <router-link to="/blog">Blog</router-link>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </header>
-    </div>
+        </div>
+    </header>
 </template>
 
 <script>
@@ -33,17 +31,12 @@ export default {
     components: {
         LogoComp,
     },
-
-    data() {
-        return {},
-    },
-
-    mounted() {},
-
-    methods: {},
 };
 </script>
 <style lang="scss" scoped>
+@import '@/assets/scss/_reset.scss';
+@import '@/assets/scss/_vars.scss';
+@import '@/assets/scss/_main.scss';
 .header {
     padding-top: 44px;
     padding-bottom: 45px;

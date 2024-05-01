@@ -1,5 +1,5 @@
 <template>
-    <div class="article__item">
+    <div>
         <img :src="article.img" :alt="article.alt" class="article__img" />
         <div class="article__info">
             <h3 class="article__title header3">
@@ -37,11 +37,14 @@
 
 <script>
 export default {
-    name: 'HomeArticleItem',
-    props: ['article'],
+    name: 'BlogArticleItem',
+    props: {
+        article: {
+            type: Object,
+            default: () => {
+                return {};
+            },
+        },
+    },
 };
 </script>
-<style lang="scss" scoped>
-// @import '@/assets/scss/_vars.scss';
-// @import '@/assets/scss/_article.scss';
-</style>

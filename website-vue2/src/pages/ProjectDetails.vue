@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'FinallyProjectBlogPage',
+    name: 'FinallyProjectProjectDetails',
 
     data() {
         return {};

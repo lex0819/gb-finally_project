@@ -1,72 +1,66 @@
 <template>
-    <div>
-        <footer class="footer">
-            <div class="wrapper">
-                <div class="footer__inner">
-                    <div class="footer__item">
-                        <a href="./index.html" class="logo">
-                            <LogoComp />
-                        </a>
-                        <p class="footer__text large-paragraph">
-                            It is a long established fact that a reader will be
-                            distracted looking.
-                        </p>
-                        <ul class="footer__social">
-                            <li class="footer__social_item">
-                                <a href="#"><TwitterComp /></a>
-                            </li>
-                            <li class="footer__social_item">
-                                <a href="#"><LinkedIn /></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__item">
-                        <h3 class="footer__title header3">Pages</h3>
-                        <ul class="footer__pages">
-                            <li class="large-paragraph">
-                                <a href="#">Home</a>
-                            </li>
-                            <li class="large-paragraph">
-                                <a href="#">Project</a>
-                            </li>
-                            <li class="large-paragraph">
-                                <a href="#">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer__item">
-                        <ContactComp />
-                    </div>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__inner">
+                <div class="footer__item">
+                    <a href="./index.html" class="logo">
+                        <LogoComp />
+                    </a>
+                    <p class="footer__text large-paragraph">
+                        It is a long established fact that a reader will be
+                        distracted looking.
+                    </p>
+                    <ul class="footer__social">
+                        <li class="footer__social_item">
+                            <a href="#"><TwitterComp /></a>
+                        </li>
+                        <li class="footer__social_item">
+                            <a href="#"><LinkedIn /></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <h3 class="footer__title header3">Pages</h3>
+                    <ul class="footer__pages">
+                        <li class="large-paragraph">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="large-paragraph">
+                            <a href="#">Project</a>
+                        </li>
+                        <li class="large-paragraph">
+                            <a href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <ContactComp />
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </template>
 
 <script>
-import LogoComp from "@/components/nav/LogoComp.vue";
-import TwitterComp from "@/components/social/TwitterComp.vue";
-import LinkedIn from "@/components/social/LinkedIn.vue";
-import ContactComp from "@/components/nav/ContactComp.vue";
+import LogoComp from '@/components/nav/LogoComp.vue';
+import TwitterComp from '@/components/socials/TwitterComp';
+import LinkedIn from '@/components/socials/LinkedIn.vue';
+import ContactComp from '@/components/nav/ContactComp.vue';
 
 export default {
     name: 'FooterComp',
-    components:{
+    components: {
         LogoComp,
         TwitterComp,
         LinkedIn,
         ContactComp,
     },
-    data() {
-        return {},
-    },
-
-     mounted() {},
-
-    methods: {},
 };
 </script>
 <style lang="scss" scoped>
+@import '@/assets/scss/_reset.scss';
+@import '@/assets/scss/_vars.scss';
+@import '@/assets/scss/_main.scss';
 .footer {
     padding-top: 96px;
     padding-bottom: 134px;

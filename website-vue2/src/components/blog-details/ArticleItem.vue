@@ -9,15 +9,12 @@
 export default {
     name: 'ArticleItem',
     props: ['article'],
-
-    data() {
-        return {};
-    },
-
-    mounted() {},
-
-    methods: {},
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/scss/_reset.scss';
+@import '@/assets/scss/_vars.scss';
+@import '@/assets/scss/_main.scss';
+@import '@/assets/scss/_news.scss';
+</style>
