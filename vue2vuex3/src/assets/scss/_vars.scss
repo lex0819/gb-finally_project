@@ -1,0 +1,68 @@
+$color-primary1: #CDA274;
+$color-primary2: #292F36;
+$color-primary3: #F4F0EC;
+$color-text: #4d5053;
+$color-white: #fff;
+$color-black: #000;
+$color-border: #e7e7e7;
+
+.btn {
+    font-family: 'Jost', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-align: center;
+    padding: 26px 54px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    box-shadow: 0 10px 20px 0 rgba(192, 192, 192, 0.35);
+}
+
+@mixin default-btn($color, $bg-color) {
+    @extend .btn;
+    color: $color;
+    background: $bg-color;
+}
+
+.header1 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 1.25;
+    color: $color-primary2;
+    white-space: pre-line;
+    text-align: left;
+}
+
+.header2 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1.25;
+    // letter-spacing: 0.02em;
+    color: $color-primary2;
+
+    &__desc {
+        text-align: center;
+        margin-top: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 737px;
+    }
+}
+
+.header3 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: $color-primary2;
+}

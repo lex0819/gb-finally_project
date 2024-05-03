@@ -1,8 +1,4 @@
 .DS_Store
-credentials/
-style.css.map
-.yarn
-
 node_modules
 /dist
 

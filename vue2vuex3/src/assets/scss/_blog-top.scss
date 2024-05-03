@@ -1,0 +1,33 @@
+.blog-top {
+    width: 100%;
+    height: 356px;
+    background-image: url(@/assets/img/blog-top.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__inner {
+        width: 100%;
+        height: 356px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    &__box {
+        border-radius: 37px 37px 0 0;
+        padding: 41px 78px;
+        width: 503px;
+        height: 178px;
+        background-color: $color-white;
+    }
+
+
+}
+
+.blog-details-top {
+    width: 100%;
+    height: 356px;
+    background-image: url(@/assets/img/blog-details-top.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
