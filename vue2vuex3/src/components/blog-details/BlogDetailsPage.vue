@@ -3,19 +3,19 @@
         <section class="blog-details-top"></section>
         <section class="article-list">
             <div class="wrapper">
-                <ArticleList />
+                <PostsList />
             </div>
         </section>
     </div>
 </template>
 
 <script>
-import ArticleList from '@/components/blog-details/ArticleList';
+import PostsList from '@/components/blog-details/PostsList';
 
 export default {
     name: 'BlogDetailsPage',
     components: {
-        ArticleList,
+        PostsList,
     },
 };
 </script>

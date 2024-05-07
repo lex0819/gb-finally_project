@@ -4,10 +4,10 @@
         <div class="tag-list">
             <div
                 class="tag-item"
-                v-for="(tag, index) in setTagsActive"
-                :key="index"
-                @click="tagActive(index)"
-                :class="{ 'tag-active': tag.isActive }"
+                v-for="tag in tags"
+                :key="tag.id"
+                @click="toggleTagActive(tag)"
+                :class="{ 'tag-active': tag.name === activeTag }"
             >
                 {{ tag.name }}
             </div>
@@ -16,77 +16,36 @@
 </template>
 
 <script>
+import { mapState, mapMutations, mapActions } from 'vuex';
+
 export default {
     name: 'TagList',
-
-    props: ['tags'],
     data() {
         return {
-            tagsActive: [],
+            activeTag: null,
         };
     },
     methods: {
-        tagActive(index) {
-            let tag = '';
-            const chosenTag = this.tagsActive[index];
-            if (chosenTag.isActive === true) {
-                chosenTag.isActive = false;
-                tag = '';
+        ...mapMutations(['SET_TAGS']),
+        toggleTagActive(tag) {
+            if (this.activeTag && tag.name === this.activeTag) {
+                this.activeTag = null;
             } else {
-                this.tagsActive.forEach((it) => (it.isActive = false));
-                chosenTag.isActive = true;
-                tag = chosenTag.name;
+                this.activeTag = tag.name;
             }
-
-            this.$emit('chosenTag', tag);
+            this.$emit('setActiveTag', tag.name);
         },
     },
     computed: {
-        setTagsActive() {
-            return this.tagsActive;
-        },
+        ...mapState(['tags']),
+        ...mapActions(['fetchTags']),
     },
-    mounted() {
-        this.tagsActive = this.tags.map((element) => {
-            return {
-                name: element,
-                isActive: false,
-            };
-        });
+    created() {
+        this.SET_TAGS(this.fetchTags);
     },
 };
 </script>
-<style lang="scss" scoped>
-@import '@/assets/scss/_reset.scss';
+<style lang="scss">
 @import '@/assets/scss/_vars.scss';
-@import '@/assets/scss/_main.scss';
-.tags {
-}
-
-.tag {
-    &-list {
-        margin-top: 24px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    &-item {
-        display: inline-block;
-        font-size: 18px;
-        line-height: 1.25;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: $color-black;
-        padding: 9px 30px;
-        background-color: $color-primary3;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-
-    &-active {
-        color: $color-white;
-        background-color: $color-primary2;
-    }
-}
+@import '@/assets/scss/_tags.scss';
 </style>

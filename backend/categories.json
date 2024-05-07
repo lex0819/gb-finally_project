@@ -1,1 +1,6 @@
-["Bathroom", "Bed Room", "Kitchen", "Living Area"]
+[
+    { "id": 0, "name": "Bathroom" },
+    { "id": 1, "name": "Bed Room" },
+    { "id": 2, "name": "Kitchen" },
+    { "id": 3, "name": "Living Area" }
+]

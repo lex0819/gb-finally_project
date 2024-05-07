@@ -1,1 +1,8 @@
-["Kitchen", "Living", "Inventor", "Bedroom", "Building", "Architecture"]
+[
+    { "id": 0, "name": "Kitchen" },
+    { "id": 1, "name": "Living" },
+    { "id": 2, "name": "Inventor" },
+    { "id": 3, "name": "Bedroom" },
+    { "id": 4, "name": "Building" },
+    { "id": 5, "name": "Architecture" }
+]

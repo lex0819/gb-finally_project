@@ -8,7 +8,7 @@
                 the points of using.
             </p>
             <ul class="article__list">
-                <li v-for="post in limitPosts" :key="post.id">
+                <li v-for="post in getLimitPosts(3)" :key="post.id">
                     <HomeArticleItem :post="post" />
                 </li>
             </ul>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapActions } from 'vuex';
+import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
 import HomeArticleItem from './HomeArticleItem';
 
 export default {
@@ -27,14 +27,15 @@ export default {
         HomeArticleItem,
     },
     methods: {
-        ...mapMutations(['SET_LIMIT_POSTS']),
+        ...mapMutations(['SET_POSTS']),
     },
     computed: {
-        ...mapState(['limitPosts']),
+        ...mapState(['posts']),
         ...mapActions(['fetchPosts']),
+        ...mapGetters(['getLimitPosts']),
     },
     created() {
-        this.SET_LIMIT_POSTS(this.fetchPosts);
+        this.SET_POSTS(this.fetchPosts);
     },
 };
 </script>

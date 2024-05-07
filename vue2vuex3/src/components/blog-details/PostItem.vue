@@ -1,14 +1,21 @@
 <template>
     <div class="news-item">
-        <h2 class="header2">{{ article.title }}</h2>
-        <div v-html="article.text" class="news-text"></div>
+        <h2 class="header2">{{ post.title }}</h2>
+        <div v-html="post.text" class="news-text"></div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'ArticleItem',
-    props: ['article'],
+    name: 'PostItem',
+    props: {
+        post: {
+            type: Object,
+            default: () => {
+                return {};
+            },
+        },
+    },
 };
 </script>
 

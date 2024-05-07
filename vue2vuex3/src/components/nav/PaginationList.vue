@@ -60,6 +60,7 @@ export default {
 @import '@/assets/scss/_vars.scss';
 .pagination {
     &__list {
+        margin-top: 51px;
         display: flex;
         justify-content: center;
         align-items: center;

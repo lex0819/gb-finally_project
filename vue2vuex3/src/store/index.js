@@ -9,9 +9,6 @@ export default new Vuex.Store({
         categories: [],
         posts: [],
         projects: [],
-        limitProjects: [],
-        limitPosts: [],
-        lastPost: {},
     },
     mutations: {
         SET_TAGS(state, payload) {
@@ -23,26 +20,44 @@ export default new Vuex.Store({
         SET_POSTS(state, payload) {
             state.posts = payload;
         },
-        SET_LIMIT_POSTS(state, payload) {
-            state.limitPosts = payload;
-        },
         SET_PROJECTS(state, payload) {
             state.projects = payload;
-        },
-        SET_LIMIT_PROJECTS(state, payload) {
-            state.limitProjects = payload;
-        },
-        SET_LAST_POST(state, payload) {
-            state.lastPost = payload;
         },
     },
     getters: {
         tags: (state) => state.tags,
+        getActiveTag: (state) => state.tags.find((el) => el.isActive === true),
+
         categories: (state) => state.categories,
+        getActiveCategory: (state) =>
+            state.categories.find((el) => el.isActive === true),
+
         posts: (state) => state.posts,
-        getLimitPosts: (state) => state.limitPosts,
+        getLimitPosts: (state) => (limit) => {
+            return state.posts.slice(0, limit);
+        },
+        getPostsByTag: (state) => (tagName) => {
+            if (tagName) {
+                return state.posts.filter((el) => tagName === el.tag);
+            } else {
+                return state.posts;
+            }
+        },
+        getLastPost: (state) => {
+            return state.posts.at(-1);
+        },
+
         projects: (state) => state.projects,
-        getLimitProjects: (state) => state.limitProjects,
+        getLimitProjects: (state) => (limit) => {
+            return state.projects.slice(0, limit);
+        },
+        getProjectsByCategory: (state) => (catName) => {
+            if (catName) {
+                return state.projects.filter((el) => catName === el.category);
+            } else {
+                return state.projects;
+            }
+        },
     },
     actions: {
         fetchTags({ commit }) {
@@ -62,7 +77,6 @@ export default new Vuex.Store({
                 .then((res) => res.json())
                 .then((json) => {
                     commit('SET_POSTS', json);
-                    commit('SET_LIMIT_POSTS', json.slice(0, 3));
                 });
         },
         fetchProjects({ commit }) {
@@ -70,13 +84,7 @@ export default new Vuex.Store({
                 .then((res) => res.json())
                 .then((json) => {
                     commit('SET_PROJECTS', json);
-                    commit('SET_LIMIT_PROJECTS', json.slice(0, 4));
                 });
-        },
-        fetchLastPost({ commit }) {
-            fetch('https://apigb.elenivan.ru/getphpservice.php?fname=lastpost')
-                .then((res) => res.json())
-                .then((json) => commit('SET_LAST_POST', json));
         },
     },
 });

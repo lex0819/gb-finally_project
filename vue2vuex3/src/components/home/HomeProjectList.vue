@@ -10,7 +10,7 @@
             <ul class="project__list">
                 <li
                     class="project__item"
-                    v-for="project in limitProjects"
+                    v-for="project in getLimitProjects(4)"
                     :key="project.id"
                 >
                     <HomeProjectItem :project="project" />
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapActions } from 'vuex';
+import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
 import HomeProjectItem from '@/components/home/HomeProjectItem';
 
 export default {
@@ -30,14 +30,15 @@ export default {
         HomeProjectItem,
     },
     methods: {
-        ...mapMutations(['SET_LIMIT_PROJECTS']),
+        ...mapMutations(['SET_PROJECTS']),
     },
     computed: {
-        ...mapState(['limitProjects']),
+        ...mapState(['projects']),
         ...mapActions(['fetchProjects']),
+        ...mapGetters(['getLimitProjects']),
     },
     created() {
-        this.SET_LIMIT_PROJECTS(this.fetchProjects);
+        this.SET_PROJECTS(this.fetchProjects);
     },
 };
 </script>

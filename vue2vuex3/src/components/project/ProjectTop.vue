@@ -22,10 +22,10 @@
 
 <script>
 export default {
-    name: 'BlogTop',
+    name: 'ProjectTop',
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/scss/_reset.scss';
 @import '@/assets/scss/_vars.scss';
 @import '@/assets/scss/_main.scss';
