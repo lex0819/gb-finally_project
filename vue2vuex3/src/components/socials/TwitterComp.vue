@@ -10,13 +10,5 @@
 <script>
 export default {
     name: 'TwitterComp',
-
-    data() {
-        return {};
-    },
-
-    mounted() {},
-
-    methods: {},
 };
 </script>

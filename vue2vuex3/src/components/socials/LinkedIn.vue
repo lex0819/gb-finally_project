@@ -15,13 +15,5 @@
 <script>
 export default {
     name: 'LinkedIn',
-
-    data() {
-        return {};
-    },
-
-    mounted() {},
-
-    methods: {},
 };
 </script>

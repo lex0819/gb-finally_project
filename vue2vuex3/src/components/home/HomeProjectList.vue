@@ -1,6 +1,8 @@
 <template>
     <section class="project">
         <div class="wrapper">
+            <!-- {{ getLimitProjects(4) }} -->
+            <!-- {{ limitProjects(4) }} doesn't work !!!! -->
             <h2 class="project__title header2">Follow Our Projects</h2>
             <p class="project__desc header2__desc large-paragraph">
                 It is a long established fact that a reader will be distracted
@@ -36,6 +38,9 @@ export default {
         ...mapState(['projects']),
         ...mapActions(['fetchProjects']),
         ...mapGetters(['getLimitProjects']),
+        limitProjects(limit) {
+            return this.getLimitProjects(limit);
+        },
     },
     created() {
         this.SET_PROJECTS(this.fetchProjects);

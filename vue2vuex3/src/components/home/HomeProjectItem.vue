@@ -10,7 +10,11 @@
                 <h3 class="project__name header3">{{ project.title }}</h3>
                 <p class="project__category">{{ project.keywords }}</p>
             </div>
-            <a href="#" class="project__btn round__btn">
+
+            <router-link
+                :to="`/project-one/${project.id}`"
+                class="project__btn round__btn"
+            >
                 <svg
                     width="71"
                     height="70"
@@ -27,7 +31,7 @@
                         stroke-linejoin="round"
                     />
                 </svg>
-            </a>
+            </router-link>
         </div>
     </div>
 </template>

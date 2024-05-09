@@ -2,22 +2,19 @@
     <header class="header">
         <div class="wrapper">
             <div class="header__inner">
-                <a href="./index.html" class="logo">
+                <router-link to="/">
                     <LogoComp />
-                </a>
+                </router-link>
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="#">Home</a>
-                            <!-- <router-link to="/">Home</router-link> -->
+                            <router-link to="/">Home</router-link>
                         </li>
                         <li class="menu__item">
-                            <a href="#">Project</a>
-                            <!-- <router-link to="/project">Project</router-link> -->
+                            <router-link to="/project">Project</router-link>
                         </li>
                         <li class="menu__item">
-                            <a href="#">Blog</a>
-                            <!-- <router-link to="/blog">Blog</router-link> -->
+                            <router-link to="/blog">Blog</router-link>
                         </li>
                     </ul>
                 </nav>
@@ -27,6 +24,7 @@
 </template>
 
 <script>
+// import router from 'vue-router';
 import LogoComp from '@/components/nav/LogoComp.vue';
 
 export default {
@@ -36,33 +34,7 @@ export default {
     },
 };
 </script>
-<style lang="scss" scoped>
-@import '@/assets/scss/_reset.scss';
+<style lang="scss">
 @import '@/assets/scss/_vars.scss';
-@import '@/assets/scss/_main.scss';
-.header {
-    padding-top: 44px;
-    padding-bottom: 45px;
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-}
-
-.menu {
-    &__list {
-        display: flex;
-        justify-content: end;
-        gap: 45px;
-        align-items: center;
-    }
-
-    &__item {
-        font-size: 20px;
-        line-height: 1.25;
-    }
-}
+@import '@/assets/scss/_header.scss';
 </style>

@@ -50,8 +50,6 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '@/assets/scss/_reset.scss';
 @import '@/assets/scss/_vars.scss';
-@import '@/assets/scss/_main.scss';
 @import '@/assets/scss/_project-page.scss';
 </style>

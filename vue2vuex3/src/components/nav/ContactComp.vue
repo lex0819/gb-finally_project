@@ -13,13 +13,5 @@
 <script>
 export default {
     name: 'ContactComp',
-
-    data() {
-        return {};
-    },
-
-    mounted() {},
-
-    methods: {},
 };
 </script>

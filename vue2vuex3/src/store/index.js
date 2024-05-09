@@ -26,15 +26,15 @@ export default new Vuex.Store({
     },
     getters: {
         tags: (state) => state.tags,
-        getActiveTag: (state) => state.tags.find((el) => el.isActive === true),
-
         categories: (state) => state.categories,
-        getActiveCategory: (state) =>
-            state.categories.find((el) => el.isActive === true),
 
         posts: (state) => state.posts,
         getLimitPosts: (state) => (limit) => {
-            return state.posts.slice(0, limit);
+            if (limit) {
+                return state.posts.slice(0, limit);
+            } else {
+                return state.posts;
+            }
         },
         getPostsByTag: (state) => (tagName) => {
             if (tagName) {
@@ -44,12 +44,16 @@ export default new Vuex.Store({
             }
         },
         getLastPost: (state) => {
-            return state.posts.at(-1);
+            return { ...state.posts.slice(-1)[0] };
         },
 
         projects: (state) => state.projects,
         getLimitProjects: (state) => (limit) => {
-            return state.projects.slice(0, limit);
+            if (limit) {
+                return state.projects.slice(0, limit);
+            } else {
+                return state.projects;
+            }
         },
         getProjectsByCategory: (state) => (catName) => {
             if (catName) {
@@ -58,33 +62,43 @@ export default new Vuex.Store({
                 return state.projects;
             }
         },
+        getLastProject: (state) => {
+            return { ...state.projects.slice(-1)[0] };
+        },
+        getProjectById: (state) => (id) => {
+            if (id) {
+                return state.projects.find((elem) => +id === elem.id);
+            } else {
+                return state.projects.find((elem) => 1 === elem.id);
+            }
+        },
     },
     actions: {
         fetchTags({ commit }) {
             fetch('https://apigb.elenivan.ru/getphpservice.php?fname=tags')
                 .then((res) => res.json())
-                .then((json) => commit('SET_TAGS', json));
+                .then((json) => commit('SET_TAGS', json))
+                .catch((er) => console.log(er.message));
         },
         fetchCategories({ commit }) {
             fetch(
                 'https://apigb.elenivan.ru/getphpservice.php?fname=categories'
             )
                 .then((res) => res.json())
-                .then((json) => commit('SET_CATEGORIES', json));
+                .then((json) => commit('SET_CATEGORIES', json))
+                .catch((er) => console.log(er.message));
         },
         fetchPosts({ commit }) {
             fetch('https://apigb.elenivan.ru/getphpservice.php?fname=posts')
                 .then((res) => res.json())
-                .then((json) => {
-                    commit('SET_POSTS', json);
-                });
+                .then((json) => commit('SET_POSTS', json))
+                .catch((er) => console.log(er.message));
         },
         fetchProjects({ commit }) {
             fetch('https://apigb.elenivan.ru/getphpservice.php?fname=projects')
                 .then((res) => res.json())
-                .then((json) => {
-                    commit('SET_PROJECTS', json);
-                });
+                .then((json) => commit('SET_PROJECTS', json))
+                .catch((er) => console.log(er.message));
         },
     },
 });

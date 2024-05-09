@@ -56,36 +56,7 @@ export default {
     methods: {},
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/scss/_vars.scss';
-.pagination {
-    &__list {
-        margin-top: 51px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    &__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 52px;
-        height: 52px;
-        border: 1px solid $color-primary1;
-        border-radius: 100%;
-        cursor: pointer;
-        background-color: $color-white;
-
-        &:hover {
-            background-color: $color-primary1;
-        }
-    }
-
-    &__item_active {
-        background-color: $color-primary3;
-        border: none;
-    }
-}
+@import '@/assets/scss/_pagination.scss';
 </style>

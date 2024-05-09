@@ -1,0 +1,33 @@
+.page404 {
+    &-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        max-width: 569px;
+    }
+
+    &-header {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-size: 25vw;
+        line-height: 1.25;
+        color: $color-primary1;
+    }
+
+    &-text {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-size: 4vw;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        color: $color-primary2;
+    }
+
+    &-btn {
+        @include default-btn($color-white, $color-primary2)
+    }
+}

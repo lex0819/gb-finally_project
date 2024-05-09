@@ -4,9 +4,12 @@
         <div class="project__footer">
             <div class="project__info">
                 <h3 class="project__name header3">{{ project.title }}</h3>
-                <p class="progect__category">{{ project.keywords }}</p>
+                <p class="project__category">{{ project.keywords }}</p>
             </div>
-            <a href="#" class="project__btn round__btn">
+            <router-link
+                :to="`/project-one/${project.id}`"
+                class="project__btn round__btn"
+            >
                 <svg
                     width="71"
                     height="70"
@@ -23,7 +26,7 @@
                         stroke-linejoin="round"
                     ></path>
                 </svg>
-            </a>
+            </router-link>
         </div>
     </div>
 </template>
@@ -42,8 +45,6 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '@/assets/scss/_reset.scss';
 @import '@/assets/scss/_vars.scss';
-@import '@/assets/scss/_main.scss';
 @import '@/assets/scss/_project.scss';
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="logo">
         <svg
             width="34"
             height="34"
@@ -19,17 +19,9 @@
 <script>
 export default {
     name: 'LogoComp',
-
-    data() {
-        return {};
-    },
-
-    mounted() {},
-
-    methods: {},
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .logo {
     display: flex;
     gap: 10px;

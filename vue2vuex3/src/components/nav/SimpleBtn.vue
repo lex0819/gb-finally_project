@@ -23,14 +23,6 @@
 
 <script>
 export default {
-    name: 'FinallyProjectSimpleBtn',
-
-    data() {
-        return {};
-    },
-
-    mounted() {},
-
-    methods: {},
+    name: 'SimpleBtn',
 };
 </script>

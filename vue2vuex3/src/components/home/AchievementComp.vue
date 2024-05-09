@@ -28,7 +28,7 @@ export default {
     name: 'AchievementComp',
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/scss/_vars.scss';
 @import '@/assets/scss/_achievement.scss';
 </style>

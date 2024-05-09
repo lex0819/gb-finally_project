@@ -2,7 +2,7 @@
     {
         "id": 0,
         "title": "Modern Kitchen",
-        "img": "https://apigb.elenivan.ru/img/image01.jpg",
+        "img": ["https://apigb.elenivan.ru/img/image01.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -11,7 +11,7 @@
     {
         "id": 1,
         "title": "Modern Kitchen",
-        "img": "https://apigb.elenivan.ru/img/image02.jpg",
+        "img": ["https://apigb.elenivan.ru/img/image02.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -20,7 +20,7 @@
     {
         "id": 2,
         "title": "Modern Kitchen",
-        "img": "https://apigb.elenivan.ru/img/image03.jpg",
+        "img": ["https://apigb.elenivan.ru/img/image03.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -29,7 +29,7 @@
     {
         "id": 3,
         "title": "Modern Kitchen",
-        "img": "https://apigb.elenivan.ru/img/image04.jpg",
+        "img": ["https://apigb.elenivan.ru/img/image04.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -38,7 +38,7 @@
     {
         "id": 4,
         "title": "Minimal Look Bedrooms",
-        "img": "https://apigb.elenivan.ru/img/proj01.jpg",
+        "img": ["https://apigb.elenivan.ru/img/proj01.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -47,7 +47,7 @@
     {
         "id": 5,
         "title": "Minimal Bedroom",
-        "img": "https://apigb.elenivan.ru/img/proj02.jpg",
+        "img": ["https://apigb.elenivan.ru/img/proj02.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -56,7 +56,7 @@
     {
         "id": 6,
         "title": "Minimal Bedroom",
-        "img": "https://apigb.elenivan.ru/img/proj03.jpg",
+        "img": ["https://apigb.elenivan.ru/img/proj03.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -65,7 +65,7 @@
     {
         "id": 7,
         "title": "Modern Bedroom",
-        "img": "https://apigb.elenivan.ru/img/proj04.jpg",
+        "img": ["https://apigb.elenivan.ru/img/proj04.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -74,7 +74,7 @@
     {
         "id": 8,
         "title": "Classic Minimal Bedroom",
-        "img": "https://apigb.elenivan.ru/img/proj05.jpg",
+        "img": ["https://apigb.elenivan.ru/img/proj05.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -83,7 +83,7 @@
     {
         "id": 9,
         "title": "Minimal Bedroom table",
-        "img": "https://apigb.elenivan.ru/img/proj06.jpg",
+        "img": ["https://apigb.elenivan.ru/img/proj06.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -92,7 +92,7 @@
     {
         "id": 10,
         "title": "System Table",
-        "img": "https://apigb.elenivan.ru/img/proj07.jpg",
+        "img": ["https://apigb.elenivan.ru/img/proj07.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -101,7 +101,7 @@
     {
         "id": 11,
         "title": "Modern Bedroom",
-        "img": "https://apigb.elenivan.ru/img/proj08.jpg",
+        "img": ["https://apigb.elenivan.ru/img/proj08.jpg"],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -110,7 +110,11 @@
     {
         "id": 12,
         "title": "Modern Bedroom",
-        "img": "https://apigb.elenivan.ru/img/proj09.jpg",
+        "img": [
+            "https://apigb.elenivan.ru/img/proj09.jpg",
+            "https://apigb.elenivan.ru/img/proj08.jpg",
+            "https://apigb.elenivan.ru/img/proj07.jpg"
+        ],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
