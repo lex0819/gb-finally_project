@@ -3,24 +3,23 @@
         <div class="wrapper">
             <h2 class="post__header header2">Latest Post</h2>
             <div class="post__card">
-                <img
-                    :src="lastPost.img"
-                    :alt="lastPost.alt"
-                    class="post__img"
-                />
+                <img :src="post.img" :alt="post.alt" class="post__img" />
                 <div class="post__info">
                     <h3 class="post__title header3">
-                        {{ lastPost.title }}
+                        {{ post.title }}
                     </h3>
                     <div
-                        v-html="lastPost.text"
+                        v-html="post.text"
                         class="post__text large-paragraph"
                     ></div>
                     <div class="post__footer">
                         <div class="post__date small-text">
-                            {{ lastPost.date }}
+                            {{ post.date }}
                         </div>
-                        <a href="#" class="post__btn round__btn">
+                        <router-link
+                            :to="`blog-post/${post.id}`"
+                            class="post__btn round__btn"
+                        >
                             <svg
                                 width="71"
                                 height="70"
@@ -42,7 +41,7 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </a>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -51,19 +50,15 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapActions } from 'vuex';
-
 export default {
     name: 'LastPost',
-    methods: {
-        ...mapMutations(['SET_LAST_POST']),
-    },
-    computed: {
-        ...mapState(['lastPost']),
-        ...mapActions(['fetchLastPost']),
-    },
-    created() {
-        this.SET_LAST_POST(this.fetchLastPost);
+    props: {
+        post: {
+            type: Object,
+            default: () => {
+                return {};
+            },
+        },
     },
 };
 </script>

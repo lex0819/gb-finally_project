@@ -13,7 +13,10 @@
             <p class="article__date small-text">
                 {{ post.date }}
             </p>
-            <a href="#" class="article__btn round__btn">
+            <router-link
+                :to="`/blog-post/${post.id}`"
+                class="article__btn round__btn"
+            >
                 <svg
                     width="71"
                     height="70"
@@ -30,7 +33,7 @@
                         stroke-linejoin="round"
                     />
                 </svg>
-            </a>
+            </router-link>
         </div>
     </div>
 </template>

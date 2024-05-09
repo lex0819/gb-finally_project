@@ -1,10 +1,16 @@
 <template>
+    <!-- {{ getPostById(id) }}<br />
+        <hr />
+        {{ id }} -->
     <div class="news">
-        <ul class="news-list">
+        <ul class="news-list" v-if="!id">
             <li v-for="post in getPostsByTag(activeTag)" :key="post.id">
                 <PostItem :post="post" />
             </li>
         </ul>
+        <div v-else class="news-list">
+            <PostItem :post="getPostById(id)" />
+        </div>
         <div class="news-tags">
             <TagList @setActiveTag="setActiveTag" />
         </div>
@@ -24,7 +30,8 @@ export default {
     },
     data() {
         return {
-            activeTag: '',
+            id: null,
+            activeTag: null,
         };
     },
     methods: {
@@ -33,6 +40,8 @@ export default {
             if (this.activeTag && tagName === this.activeTag) {
                 this.activeTag = null;
             } else {
+                this.id = null;
+                this.$router.push({ name: 'blog-post' });
                 this.activeTag = tagName;
             }
         },
@@ -40,16 +49,16 @@ export default {
     computed: {
         ...mapState(['posts']),
         ...mapActions(['fetchPosts']),
-        ...mapGetters(['getPostsByTag']),
+        ...mapGetters(['getPostsByTag', 'getPostById']),
     },
     created() {
         this.SET_POSTS(this.fetchPosts);
+        this.id = this.$route.params.id;
     },
 };
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/_reset.scss';
 @import '@/assets/scss/_vars.scss';
 @import '@/assets/scss/_main.scss';
 @import '@/assets/scss/_news.scss';

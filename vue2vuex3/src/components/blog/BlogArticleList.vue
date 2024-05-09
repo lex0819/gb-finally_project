@@ -1,26 +1,36 @@
 <template>
-    <section class="article" id="app">
-        <div class="wrapper">
-            <h2 class="article__title header2">Articles & News</h2>
-            <p class="article__desc header2__desc large-paragraph">
-                It is a long established fact that a reader will be distracted
-                by the of readable content of a page when looking at its layouts
-                the points of using.
-            </p>
-            <ul class="article__list">
-                <li class="article__item" v-for="post in posts" :key="post.id">
-                    <BlogArticleItem :post="post" />
-                </li>
-            </ul>
-            <div class="article__pagination">
-                <PaginationList />
+    <div>
+        <div v-show="showPosts">{{ posts }}</div>
+        <!-- {{ getLastPost }} -->
+        <LastPost :post="getLastPost" />
+        <section class="article" id="app">
+            <div class="wrapper">
+                <h2 class="article__title header2">Articles & News</h2>
+                <p class="article__desc header2__desc large-paragraph">
+                    It is a long established fact that a reader will be
+                    distracted by the of readable content of a page when looking
+                    at its layouts the points of using.
+                </p>
+                <ul class="article__list">
+                    <li
+                        class="article__item"
+                        v-for="post in posts"
+                        :key="post.id"
+                    >
+                        <BlogArticleItem :post="post" />
+                    </li>
+                </ul>
+                <div class="article__pagination">
+                    <PaginationList />
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </template>
 
 <script>
-import { mapState, mapMutations, mapActions } from 'vuex';
+import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
+import LastPost from '@/components/blog/LastPost.vue';
 import BlogArticleItem from '@/components/blog/BlogArticleItem.vue';
 import PaginationList from '@/components/nav/PaginationList.vue';
 
@@ -28,7 +38,14 @@ export default {
     name: 'BlogArticleList',
     components: {
         BlogArticleItem,
+        LastPost,
         PaginationList,
+    },
+    data() {
+        return {
+            showPosts: false,
+            perPage: 6,
+        };
     },
     methods: {
         ...mapMutations(['SET_POSTS']),
@@ -36,6 +53,7 @@ export default {
     computed: {
         ...mapState(['posts']),
         ...mapActions(['fetchPosts']),
+        ...mapGetters(['posts', 'getLastPost']),
     },
     created() {
         this.SET_POSTS(this.fetchPosts);

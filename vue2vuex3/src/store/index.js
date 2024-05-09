@@ -44,7 +44,14 @@ export default new Vuex.Store({
             }
         },
         getLastPost: (state) => {
-            return { ...state.posts.slice(-1)[0] };
+            return state.posts.slice(-1)[0];
+        },
+        getPostById: (state) => (id) => {
+            if (id) {
+                return state.posts.find((elem) => +id === elem.id);
+            } else {
+                return null;
+            }
         },
 
         projects: (state) => state.projects,
@@ -62,14 +69,14 @@ export default new Vuex.Store({
                 return state.projects;
             }
         },
-        getLastProject: (state) => {
-            return { ...state.projects.slice(-1)[0] };
-        },
+        // getLastProject: (state) => {
+        //     return state.projects.slice(-1)[0];
+        // },
         getProjectById: (state) => (id) => {
             if (id) {
                 return state.projects.find((elem) => +id === elem.id);
             } else {
-                return state.projects.find((elem) => 1 === elem.id);
+                return null;
             }
         },
     },
