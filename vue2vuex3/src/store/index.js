@@ -1,9 +1,11 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+// import Vue from 'vue';
+// import Vuex from 'vuex';
 
-Vue.use(Vuex);
+// Vue.use(Vuex);
 
-export default new Vuex.Store({
+// export default new Vuex.Store({
+
+export default {
     state: {
         tags: [],
         categories: [],
@@ -31,24 +33,28 @@ export default new Vuex.Store({
         posts: (state) => state.posts,
         getLimitPosts: (state) => (limit) => {
             if (limit) {
-                return state.posts.slice(0, limit);
+                return Object.values(state.posts).slice(0, limit);
             } else {
                 return state.posts;
             }
         },
         getPostsByTag: (state) => (tagName) => {
             if (tagName) {
-                return state.posts.filter((el) => tagName === el.tag);
+                return Object.values(state.posts).filter(
+                    (el) => tagName === el.tag
+                );
             } else {
                 return state.posts;
             }
         },
         getLastPost: (state) => {
-            return state.posts.slice(-1)[0];
+            return Object.values(state.posts).slice(-1)[0];
         },
         getPostById: (state) => (id) => {
             if (id) {
-                return state.posts.find((elem) => +id === elem.id);
+                return Object.values(state.posts).find(
+                    (elem) => +id === elem.id
+                );
             } else {
                 return null;
             }
@@ -57,24 +63,26 @@ export default new Vuex.Store({
         projects: (state) => state.projects,
         getLimitProjects: (state) => (limit) => {
             if (limit) {
-                return state.projects.slice(0, limit);
+                return Object.values(state.projects).slice(0, limit);
             } else {
                 return state.projects;
             }
         },
         getProjectsByCategory: (state) => (catName) => {
             if (catName) {
-                return state.projects.filter((el) => catName === el.category);
+                return Object.values(state.projects).filter(
+                    (el) => catName === el.category
+                );
             } else {
                 return state.projects;
             }
         },
-        // getLastProject: (state) => {
-        //     return state.projects.slice(-1)[0];
-        // },
         getProjectById: (state) => (id) => {
             if (id) {
-                return state.projects.find((elem) => +id === elem.id);
+                const data = Object.values(state.projects).find(
+                    (elem) => +id === elem.id
+                );
+                return data;
             } else {
                 return null;
             }
@@ -108,4 +116,6 @@ export default new Vuex.Store({
                 .catch((er) => console.log(er.message));
         },
     },
-});
+};
+
+// });

@@ -1,8 +1,5 @@
 <template>
     <div>
-        <!-- {{ getProjectById(id) }}<br />
-        <hr />
-        {{ id }} -->
         <section class="project">
             <div class="wrapper">
                 <h2 class="project__name header2">
@@ -10,7 +7,7 @@
                 </h2>
                 <div
                     v-html="getProjectById(id).text"
-                    class="large-paragraph"
+                    class="project-text large-paragraph"
                 ></div>
                 <div class="project-slider">
                     <VueSlickCarousel :arrows="true" :dots="true">

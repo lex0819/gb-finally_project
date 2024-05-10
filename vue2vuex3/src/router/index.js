@@ -1,10 +1,10 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+// import Vue from 'vue';
+import VueRouter from 'vue-router';
 import HomePage from '@/pages/HomePage.vue';
 
-Vue.use(Router);
+// Vue.use(Router);
 
-export default new Router({
+const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
@@ -15,7 +15,7 @@ export default new Router({
             component: () => import('../pages/BlogPage.vue'),
         },
         {
-            path: '/blog-post/:id?',
+            path: '/blog-post/:id',
             name: 'blog-post',
             component: () => import('../pages/BlogDetailsPage.vue'),
             props: true,
@@ -26,7 +26,7 @@ export default new Router({
             component: () => import('../pages/ProjectPage.vue'),
         },
         {
-            path: '/project-one/:id?',
+            path: '/project-one/:id',
             name: 'project-one',
             component: () => import('../pages/ProjectDetailsPage.vue'),
             props: true,
@@ -42,3 +42,4 @@ export default new Router({
         },
     ],
 });
+export default router;

@@ -1,8 +1,9 @@
 <template>
-    <!-- {{ getPostById(id) }}<br />
-        <hr />
-        {{ id }} -->
     <div class="news">
+        <!-- {{ getPostById(id) }}<br />
+        <hr />
+        {{ isId }}<br />
+        <hr /> -->
         <ul class="news-list" v-if="!id">
             <li v-for="post in getPostsByTag(activeTag)" :key="post.id">
                 <PostItem :post="post" />

@@ -1,10 +1,17 @@
 <template>
     <div class="project-item">
-        <img :src="project.img" :alt="project.alt" class="project__img" />
+        <img :src="project.img[0]" :alt="project.alt" class="project__img" />
         <div class="project__footer">
             <div class="project__info">
                 <h3 class="project__name header3">{{ project.title }}</h3>
-                <p class="project__category">{{ project.keywords }}</p>
+                <span v-for="(word, ind) in project.keywords" :key="ind">
+                    <span class="project__category">
+                        {{ word }}
+                        <span v-if="ind < project.keywords.length - 1">
+                            /
+                        </span>
+                    </span>
+                </span>
             </div>
             <router-link
                 :to="`/project-one/${project.id}`"

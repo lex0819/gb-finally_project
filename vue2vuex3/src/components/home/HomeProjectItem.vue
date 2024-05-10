@@ -1,14 +1,22 @@
 <template>
     <div>
         <img
-            :src="project.img"
+            :src="project.img[0]"
             :alt="project.alt"
-            class="project__img project__img_01"
+            class="project__img"
+            :class="`project__img_0${index + 1}`"
         />
         <div class="project__footer">
             <div class="project__info">
                 <h3 class="project__name header3">{{ project.title }}</h3>
-                <p class="project__category">{{ project.keywords }}</p>
+                <span v-for="(word, ind) in project.keywords" :key="ind">
+                    <span class="project__category">
+                        {{ word }}
+                        <span v-if="ind < project.keywords.length - 1">
+                            /
+                        </span>
+                    </span>
+                </span>
             </div>
 
             <router-link
@@ -44,6 +52,12 @@ export default {
             type: Object,
             default: () => {
                 return {};
+            },
+        },
+        index: {
+            type: Number,
+            default: () => {
+                return 0;
             },
         },
     },

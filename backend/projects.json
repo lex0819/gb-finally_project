@@ -1,8 +1,12 @@
 [
     {
         "id": 0,
-        "title": "Modern Kitchen",
-        "img": ["https://apigb.elenivan.ru/img/image01.jpg"],
+        "title": "Modern Bed Room",
+        "img": [
+            "https://apigb.elenivan.ru/img/image01.jpg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772121956.jpeg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772242651.jpeg"
+        ],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -11,34 +15,50 @@
     {
         "id": 1,
         "title": "Modern Kitchen",
-        "img": ["https://apigb.elenivan.ru/img/image02.jpg"],
+        "img": [
+            "https://apigb.elenivan.ru/img/image02.jpg",
+            "https://images.elenivan.ru/jpg/food-pizza-pepper-meal.jpeg",
+            "https://images.elenivan.ru/jpg/malina-yagody-yabloki.jpg"
+        ],
         "alt": "news01",
-        "category": "Bed Room",
+        "category": "Kitchen",
         "keywords": ["Decor", "Architecture"],
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.</p><p>In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.</p>"
     },
     {
         "id": 2,
-        "title": "Modern Kitchen",
-        "img": ["https://apigb.elenivan.ru/img/image03.jpg"],
+        "title": "Modern Bathroom",
+        "img": [
+            "https://apigb.elenivan.ru/img/image03.jpg",
+            "https://images.elenivan.ru/jpg/snow-winter-warm-sweet.jpeg",
+            "https://images.elenivan.ru/jpg/sea-coast-architecture-sky.jpeg"
+        ],
         "alt": "news01",
-        "category": "Bed Room",
+        "category": "Bathroom",
         "keywords": ["Decor", "Architecture"],
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.</p><p>In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.</p>"
     },
     {
         "id": 3,
-        "title": "Modern Kitchen",
-        "img": ["https://apigb.elenivan.ru/img/image04.jpg"],
+        "title": "Modern Living Area",
+        "img": [
+            "https://apigb.elenivan.ru/img/image04.jpg",
+            "https://images.elenivan.ru/jpg/miscellaneous-easter-eggs-holidays.jpeg",
+            "https://images.elenivan.ru/jpg/food-flowers-easter-rabbits.jpeg"
+        ],
         "alt": "news01",
-        "category": "Bed Room",
+        "category": "Living Area",
         "keywords": ["Decor", "Architecture"],
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.</p><p>In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.</p>"
     },
     {
         "id": 4,
         "title": "Minimal Look Bedrooms",
-        "img": ["https://apigb.elenivan.ru/img/proj01.jpg"],
+        "img": [
+            "https://apigb.elenivan.ru/img/proj01.jpg",
+            "https://images.elenivan.ru/jpg/christmas-tree-decorated-christmas-tree-toys-on-the-christmas-tree-opgv.jpg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772187758.jpeg"
+        ],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -47,7 +67,11 @@
     {
         "id": 5,
         "title": "Minimal Bedroom",
-        "img": ["https://apigb.elenivan.ru/img/proj02.jpg"],
+        "img": [
+            "https://apigb.elenivan.ru/img/proj02.jpg",
+            "https://images.elenivan.ru/jpg/snow-winter-warm-sweet.jpeg",
+            "https://images.elenivan.ru/jpg/sea-coast-architecture-sky.jpeg"
+        ],
         "alt": "news01",
         "category": "Bed Room",
         "keywords": ["Decor", "Architecture"],
@@ -55,55 +79,79 @@
     },
     {
         "id": 6,
-        "title": "Minimal Bedroom",
-        "img": ["https://apigb.elenivan.ru/img/proj03.jpg"],
+        "title": "Minimal Kitchen",
+        "img": [
+            "https://apigb.elenivan.ru/img/proj03.jpg",
+            "https://images.elenivan.ru/jpg/snow-winter-warm-sweet.jpeg",
+            "https://images.elenivan.ru/jpg/sea-coast-architecture-sky.jpeg"
+        ],
         "alt": "news01",
-        "category": "Bed Room",
+        "category": "Kitchen",
         "keywords": ["Decor", "Architecture"],
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.</p><p>In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.</p>"
     },
     {
         "id": 7,
-        "title": "Modern Bedroom",
-        "img": ["https://apigb.elenivan.ru/img/proj04.jpg"],
+        "title": "Modern Kitchen",
+        "img": [
+            "https://apigb.elenivan.ru/img/proj04.jpg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772121956.jpeg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772242651.jpeg"
+        ],
         "alt": "news01",
-        "category": "Bed Room",
+        "category": "Kitchen",
         "keywords": ["Decor", "Architecture"],
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.</p><p>In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.</p>"
     },
     {
         "id": 8,
-        "title": "Classic Minimal Bedroom",
-        "img": ["https://apigb.elenivan.ru/img/proj05.jpg"],
+        "title": "Classic Minimal Bathroom",
+        "img": [
+            "https://apigb.elenivan.ru/img/proj05.jpg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772121956.jpeg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772242651.jpeg"
+        ],
         "alt": "news01",
-        "category": "Bed Room",
+        "category": "Bathroom",
         "keywords": ["Decor", "Architecture"],
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.</p><p>In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.</p>"
     },
     {
         "id": 9,
-        "title": "Minimal Bedroom table",
-        "img": ["https://apigb.elenivan.ru/img/proj06.jpg"],
+        "title": "Minimal Bathroom table",
+        "img": [
+            "https://apigb.elenivan.ru/img/proj06.jpg",
+            "https://images.elenivan.ru/jpg/boke-butylka-krupnym-planom.jpg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772147314.jpeg"
+        ],
         "alt": "news01",
-        "category": "Bed Room",
+        "category": "Bathroom",
         "keywords": ["Decor", "Architecture"],
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.</p><p>In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.</p>"
     },
     {
         "id": 10,
         "title": "System Table",
-        "img": ["https://apigb.elenivan.ru/img/proj07.jpg"],
+        "img": [
+            "https://apigb.elenivan.ru/img/proj07.jpg",
+            "https://images.elenivan.ru/jpg/boke-butylka-krupnym-planom.jpg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772147314.jpeg"
+        ],
         "alt": "news01",
-        "category": "Bed Room",
+        "category": "Living Area",
         "keywords": ["Decor", "Architecture"],
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.</p><p>In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.</p>"
     },
     {
         "id": 11,
         "title": "Modern Bedroom",
-        "img": ["https://apigb.elenivan.ru/img/proj08.jpg"],
+        "img": [
+            "https://apigb.elenivan.ru/img/proj08.jpg",
+            "https://images.elenivan.ru/jpg/boke-butylka-krupnym-planom.jpg",
+            "https://images.elenivan.ru/jpg/1536x864_1666772147314.jpeg"
+        ],
         "alt": "news01",
-        "category": "Bed Room",
+        "category": "Living Area",
         "keywords": ["Decor", "Architecture"],
         "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa, vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in the ipsum vel lectus bibendum commodo.</p><p>In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque arcu. Donec a pellentesque Cras erat enim, gravida non ante vitae,elequis convallis elit, in viverra felis. Donec ultrices tellus vitae iaculisvd porta. Proin tincidunt ligula id purus porttitor.</p>"
     },

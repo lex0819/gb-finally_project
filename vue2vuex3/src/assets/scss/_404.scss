@@ -1,19 +1,26 @@
 .page404 {
     &-box {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        gap: 30px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-info {
         display: flex;
         flex-direction: column;
-        max-width: 569px;
+        justify-content: center;
+        align-items: start;
     }
 
     &-header {
         font-family: "DM Serif Display", serif;
         font-weight: 400;
-        font-size: 25vw;
+        font-size: min(15vw, 250px);
         line-height: 1.25;
         color: $color-primary1;
     }
@@ -21,13 +28,24 @@
     &-text {
         font-family: "DM Serif Display", serif;
         font-weight: 400;
-        font-size: 4vw;
+        font-size: min(3.4vw, 35px);
         line-height: 1.5;
         letter-spacing: 0.01em;
         color: $color-primary2;
     }
 
+    &-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 23px;
+    }
+
     &-btn {
         @include default-btn($color-white, $color-primary2)
+    }
+
+    &-img {
+        border-radius: 0 0 0 27vw;
     }
 }

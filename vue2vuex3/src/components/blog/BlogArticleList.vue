@@ -1,7 +1,5 @@
 <template>
     <div>
-        <div v-show="showPosts">{{ posts }}</div>
-        <!-- {{ getLastPost }} -->
         <LastPost :post="getLastPost" />
         <section class="article" id="app">
             <div class="wrapper">
@@ -43,7 +41,6 @@ export default {
     },
     data() {
         return {
-            showPosts: false,
             perPage: 6,
         };
     },

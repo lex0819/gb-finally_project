@@ -17,6 +17,14 @@ export default {
     components: {
         PostsList,
     },
+    data() {
+        return {};
+    },
+    created() {},
+    beforeRouteEnter(to, from, next) {
+        // console.log(Number(to.params.id));
+        next();
+    },
 };
 </script>
 <style lang="scss">

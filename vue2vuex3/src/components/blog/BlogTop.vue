@@ -7,11 +7,9 @@
                     <nav class="breadcrumbs large-paragraph">
                         <ul class="breadcrumbs__list">
                             <li class="breadcrumbs__item">
-                                <a href="#">Home</a>
+                                <router-link to="/">Home</router-link>
                             </li>
-                            <li class="breadcrumbs__item">
-                                <a href="#">Blog</a>
-                            </li>
+                            <li class="breadcrumbs__item">Blog</li>
                         </ul>
                     </nav>
                 </div>
