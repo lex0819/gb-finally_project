@@ -8,6 +8,13 @@ https://www.figma.com/design/LImh13o4XQPl07RZAhHmDq/Interior-Design-Webflow-Webs
 
 https://geekbrains.elenivan.ru
 
+### server settings
+
+For vue-router we can change apache or ngnix setup.
+https://v3.router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations
+
+See .htaccess for example backend!
+
 ## Решение
 
 В проекте используются технологии vue-router@3 vuex@3.
