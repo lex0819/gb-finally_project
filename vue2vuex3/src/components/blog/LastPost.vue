@@ -17,7 +17,7 @@
                             {{ post.date }}
                         </div>
                         <router-link
-                            :to="`blog-post/${post.id}`"
+                            :to="`/blog-post/${post.id}`"
                             class="post__btn round__btn"
                         >
                             <svg
