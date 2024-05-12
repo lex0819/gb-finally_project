@@ -35,5 +35,10 @@
     &__item {
         font-size: 20px;
         line-height: 1.25;
+        transition: color .5s ease;
+
+        &:hover {
+            color: $color-primary1;
+        }
     }
 }

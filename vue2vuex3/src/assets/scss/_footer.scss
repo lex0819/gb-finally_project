@@ -58,6 +58,11 @@
 
         &>li {
             margin-top: 36px;
+            transition: color .5s ease;
+
+            &:hover {
+                color: $color-primary1;
+            }
         }
     }
 

@@ -2,22 +2,27 @@
     <div>
         <section class="project">
             <div class="wrapper">
-                <h2 class="project__name header2">
-                    {{ getProjectById(id).title }}
-                </h2>
-                <div
-                    v-html="getProjectById(id).text"
-                    class="project-text large-paragraph"
-                ></div>
-                <div class="project-slider">
-                    <VueSlickCarousel :arrows="true" :dots="true">
-                        <div
-                            v-for="(pic, index) in getProjectById(id).img"
-                            :key="index"
-                        >
-                            <img :src="pic" :alt="getProjectById(id).alt" />
-                        </div>
-                    </VueSlickCarousel>
+                <div v-if="getProjectById(id)">
+                    <h2 class="project__name header2">
+                        {{ getProjectById(id).title }}
+                    </h2>
+                    <div
+                        v-html="getProjectById(id).text"
+                        class="project-text large-paragraph"
+                    ></div>
+                    <div class="project-slider">
+                        <VueSlickCarousel :arrows="true" :dots="true">
+                            <div
+                                v-for="(pic, index) in getProjectById(id).img"
+                                :key="index"
+                            >
+                                <img :src="pic" :alt="getProjectById(id).alt" />
+                            </div>
+                        </VueSlickCarousel>
+                    </div>
+                </div>
+                <div v-else>
+                    <h1 class="header1">the project {{ id }} has not found</h1>
                 </div>
             </div>
         </section>

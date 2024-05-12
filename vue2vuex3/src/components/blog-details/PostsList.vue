@@ -1,16 +1,17 @@
 <template>
     <div class="news">
-        <!-- {{ getPostById(id) }}<br />
-        <hr />
-        {{ isId }}<br />
-        <hr /> -->
         <ul class="news-list" v-if="!id">
             <li v-for="post in getPostsByTag(activeTag)" :key="post.id">
                 <PostItem :post="post" />
             </li>
         </ul>
         <div v-else class="news-list">
-            <PostItem :post="getPostById(id)" />
+            <div v-if="getPostById(id)">
+                <PostItem :post="getPostById(id)" />
+            </div>
+            <div v-else>
+                <h1 class="header1">the post {{ id }} has not found</h1>
+            </div>
         </div>
         <div class="news-tags">
             <TagList @setActiveTag="setActiveTag" />
