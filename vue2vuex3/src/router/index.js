@@ -10,18 +10,18 @@ const router = new VueRouter({
     routes: [
         { path: '/', name: 'home', component: HomePage },
         {
-            path: '/blog',
+            path: '/blog/:page?',
             name: 'blog',
             component: () => import('../pages/BlogPage.vue'),
         },
         {
-            path: '/blog-post/:id',
+            path: '/blog-post/:id?',
             name: 'blog-post',
             component: () => import('../pages/BlogDetailsPage.vue'),
             props: true,
         },
         {
-            path: '/project',
+            path: '/project/:page?',
             name: 'project',
             component: () => import('../pages/ProjectPage.vue'),
         },

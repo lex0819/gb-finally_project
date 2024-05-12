@@ -28,6 +28,7 @@ export default {
     methods: {
         ...mapMutations(['SET_TAGS']),
         toggleTagActive(tag) {
+            this.$router.push({ name: 'blog-post' });
             if (this.activeTag && tag.name === this.activeTag) {
                 this.activeTag = null;
             } else {

@@ -52,6 +52,18 @@ export default {
                 return null;
             }
         },
+        getPostsTotalPages: (state) => (perPage) => {
+            if (perPage) {
+                return Math.ceil(Object.values(state.posts).length / perPage);
+            } else {
+                return 1;
+            }
+        },
+        paginatedPosts: (state) => (currentPage, perPage) => {
+            const startIndex = (currentPage - 1) * perPage;
+            const endIndex = startIndex + perPage;
+            return Object.values(state.posts).slice(startIndex, endIndex);
+        },
 
         projects: (state) => state.projects,
         getLimitProjects: (state) => (limit) => {
@@ -79,6 +91,20 @@ export default {
             } else {
                 return null;
             }
+        },
+        getProjectsTotalPages: (state) => (perPage) => {
+            if (perPage) {
+                return Math.ceil(
+                    Object.values(state.projects).length / perPage
+                );
+            } else {
+                return 1;
+            }
+        },
+        paginatedProjects: (state) => (currentPage, perPage) => {
+            const startIndex = (currentPage - 1) * perPage;
+            const endIndex = startIndex + perPage;
+            return Object.values(state.projects).slice(startIndex, endIndex);
         },
     },
     actions: {

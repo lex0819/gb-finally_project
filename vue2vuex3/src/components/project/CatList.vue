@@ -28,6 +28,7 @@ export default {
     methods: {
         ...mapMutations(['SET_CATEGORIES']),
         toggleCatActive(cat) {
+            this.$router.push({ name: 'project' });
             if (this.activeCat && cat.name === this.activeCat) {
                 this.activeCat = null;
             } else {

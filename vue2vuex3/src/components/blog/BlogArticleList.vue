@@ -12,14 +12,28 @@
                 <ul class="article__list">
                     <li
                         class="article__item"
-                        v-for="post in posts"
+                        v-for="post in paginatedCatalog"
                         :key="post.id"
                     >
                         <BlogArticleItem :post="post" />
                     </li>
                 </ul>
                 <div class="article__pagination">
-                    <PaginationList />
+                    <ul class="pagination__list small-text">
+                        <li
+                            v-for="page in totalPages"
+                            :key="page"
+                            class="pagination__item"
+                            :class="{
+                                pagination__item_active: page == currentPage,
+                            }"
+                            :data-pagination="page"
+                        >
+                            <router-link :to="`/blog/${page}`">{{
+                                page
+                            }}</router-link>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -30,14 +44,12 @@
 import { mapState, mapMutations, mapActions, mapGetters } from 'vuex';
 import LastPost from '@/components/blog/LastPost.vue';
 import BlogArticleItem from '@/components/blog/BlogArticleItem.vue';
-import PaginationList from '@/components/nav/PaginationList.vue';
 
 export default {
     name: 'BlogArticleList',
     components: {
         BlogArticleItem,
         LastPost,
-        PaginationList,
     },
     data() {
         return {
@@ -50,7 +62,24 @@ export default {
     computed: {
         ...mapState(['posts']),
         ...mapActions(['fetchPosts']),
-        ...mapGetters(['posts', 'getLastPost']),
+        ...mapGetters([
+            'posts',
+            'getLastPost',
+            'getPostsTotalPages',
+            'paginatedPosts',
+        ]),
+        currentPage() {
+            //получаем текущую страницу прямо из роутера
+            return this.$route.params.page || 1;
+        },
+        totalPages() {
+            // console.log(this.projects);
+            return this.getPostsTotalPages(this.perPage);
+        },
+        paginatedCatalog() {
+            const { currentPage, perPage } = this;
+            return this.paginatedPosts(currentPage, perPage);
+        },
     },
     created() {
         this.SET_POSTS(this.fetchPosts);
@@ -58,8 +87,8 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '@/assets/scss/_reset.scss';
 @import '@/assets/scss/_vars.scss';
 @import '@/assets/scss/_main.scss';
 @import '@/assets/scss/_article.scss';
+@import '@/assets/scss/_pagination.scss';
 </style>

@@ -26,5 +26,6 @@
     &__item_active {
         background-color: $color-primary3;
         border: none;
+        pointer-events: none;
     }
 }

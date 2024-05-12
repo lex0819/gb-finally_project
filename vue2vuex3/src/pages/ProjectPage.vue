@@ -4,7 +4,6 @@
             <div class="wrapper">
                 <ProjectTop />
                 <ProjectList />
-                <PaginationList />
             </div>
         </section>
     </div>
@@ -13,14 +12,12 @@
 <script>
 import ProjectTop from '@/components/project/ProjectTop';
 import ProjectList from '@/components/project/ProjectList';
-import PaginationList from '@/components/nav/PaginationList';
 
 export default {
     name: 'ProjectPage',
     components: {
         ProjectTop,
         ProjectList,
-        PaginationList,
     },
 };
 </script>

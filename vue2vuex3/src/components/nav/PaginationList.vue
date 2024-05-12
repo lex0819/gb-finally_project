@@ -9,18 +9,19 @@
                 <a href="#"></a>
             </li>
             <li
-                class="pagination__item pagination__item_active"
-                data-pagination="1"
+                v-for="page in totalPages"
+                :key="page"
+                class="pagination__item"
+                :class="activePage(page)"
+                :data-pagination="page"
             >
-                <a href="#">01</a>
+                <router-link :to="`${path}/${page}`">{{ page }}</router-link>
             </li>
-            <li class="pagination__item" data-pagination="2">
-                <a href="#">02</a>
-            </li>
-            <li class="pagination__item" data-pagination="3">
-                <a href="#">03</a>
-            </li>
-            <li class="pagination__item" data-pagination="next">
+            <li
+                class="pagination__item"
+                data-pagination="next"
+                style="display: none"
+            >
                 <a href="#">
                     <svg
                         width="9"
@@ -46,14 +47,29 @@
 <script>
 export default {
     name: 'PaginationList',
-
-    data() {
-        return {};
+    props: {
+        totalPages: {
+            type: Number,
+            default: () => {
+                return null;
+            },
+        },
     },
-
-    mounted() {},
-
-    methods: {},
+    data() {
+        return {
+            path: null,
+            currentPage: null,
+        };
+    },
+    computed: {
+        activePage(page) {
+            return page === this.currentPage ? 'pagination__item_active' : '';
+        },
+    },
+    created() {
+        this.path = this.$route.path;
+        this.currentPage = this.$route.params.page || 1;
+    },
 };
 </script>
 <style lang="scss">
